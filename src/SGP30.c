@@ -12,6 +12,7 @@
  */
 
 #include "SGP30.h"
+#include <inttypes.h>
 
 static const char *TAG = "SGP30-LIB";
 
@@ -139,7 +140,9 @@ void sgp30_set_IAQ_baseline(sgp30_dev_t *sensor, uint16_t eco2_base, uint16_t tv
 
 void sgp30_set_humidity(sgp30_dev_t *sensor, uint32_t absolute_humidity) {
     if (absolute_humidity > 256000) {
-        ESP_LOGW(TAG, "%s - Abs humidity value %d is too high!", __FUNCTION__, absolute_humidity);
+        //ESP_LOGW(TAG, "%s - Abs humidity value %d is too high!", __FUNCTION__, absolute_humidity);
+        ESP_LOGW(TAG, "%s - Abs humidity value %" PRIu32 " is too high!", __FUNCTION__, absolute_humidity);
+
         return;
     }
 
