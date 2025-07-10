@@ -28,7 +28,6 @@ static uint8_t MEASURE_AIR_QUALITY[2] =     { 0x20, 0x08 };
 static uint8_t GET_BASELINE[2] =            { 0x20, 0x15 };
 static uint8_t SET_BASELINE[2] =            { 0x20, 0x1E };
 static uint8_t SET_HUMIDITY[2] =            { 0x20, 0x61 };
-static uint8_t MEASURE_TEST[2] =            { 0x20, 0x32 };
 static uint8_t GET_FEATURE_SET_VERSION[2] = { 0x20, 0x2F };
 static uint8_t MEASURE_RAW_SIGNALS[2] =     { 0x20, 0x50 };
 static uint8_t GET_SERIAL_ID[2] =           { 0x36, 0x82 };
